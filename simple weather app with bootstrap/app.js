@@ -9,7 +9,7 @@ input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") getWeather()
 })
 
-async function getWeather() {
+const getWeather = async () => {
   const res = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=${KEY}`
   )
